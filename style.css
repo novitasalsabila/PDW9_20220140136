@@ -1,0 +1,76 @@
+/* Styling for the form */
+#travelForm {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[type="reset"]{
+    width: 100%;
+    padding: 10px;
+    background-color: #d33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3085d6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2874c9;
+}
+
+/* Styling for SweetAlert2 */
+.swal-popup {
+    font-family: 'Arial', sans-serif;
+}
+
+.swal-html-container {
+    text-align: left;
+}
+
+.swal-confirm-button {
+    background-color: #3085d6 !important;
+    color: #fff !important;
+}
+
+.swal-cancel-button {
+    background-color: #d33 !important;
+    color: #fff !important;
+}
+
+.swal-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.swal-close-button {
+    font-size: 16px;
+}

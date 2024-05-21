@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        body {
+            background-color: #949796;
+        }
+        .custom-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #314d61;
+        }
+        .card {
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .navbar {
+            background-color: #2f3236;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Travel Diary</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perjalanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="custom-section">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center">Bagi Pengalaman Perjalanan Kamu dong! </h2>
+            <form id="travelForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Tujuan</label>
+                    <input type="text" class="form-control" id="destination" name="destination" required>
+                </div>
+                <div class="mb-3">
+                    <label for="travelDate" class="form-label">Tanggal Perjalanan</label>
+                    <input type="date" class="form-control" id="travelDate" name="travelDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="travelType" class="form-label">Jenis Perjalanan</label>
+                    <select class="form-select" id="travelType" name="travelType" required>
+                        <option value="">Pilih Jenis</option>
+                        <option value="Sendiri">Sendiri</option>
+                        <option value="Keluarga">Keluarga</option>
+                        <option value="Teman">Teman</option>
+                        <option value="Bisnis">Bisnis</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="activities" class="form-label">Aktivitas</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="activity1" name="activities[]" value="Wisata">
+                            <label class="form-check-label" for="activity1">Wisata</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="activity2" name="activities[]" value="Hiking">
+                            <label class="form-check-label" for="activity2">Hiking</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="activity3" name="activities[]" value="Belanja">
+                            <label class="form-check-label" for="activity3">Belanja</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="photo" class="form-label">Unggah Foto</label>
+                    <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <input type="reset" value="Reset"><br><br>
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+    </div>
+</section>
+<script src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
